@@ -1,0 +1,95 @@
+---
+title: "Lohse Lab Shimadzu Data Parser"
+author: "Derek Pierson"
+date: "3/17/2022"
+output:
+  html_document:
+    code_folding: hide
+---
+
+```{r setup, include=TRUE, echo=TRUE, message=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+library(DT)
+```
+
+
+<button class="btn btn-primary" data-toggle="collapse" data-target="#RawData"> Show/Hide Raw Data Table</button>  
+<div id="RawData" class="collapse">  
+```{r echo=TRUE}
+# Load Shimadzu export file (.csv)
+raw_df <- read.csv("data/RCEW_NPOCTN_20220315.csv", skip=10, as.is=T)
+
+raw_df <- raw_df %>% mutate(DateTime = Date...Time)
+
+datatable(raw_df, rownames = F,
+            options = list(
+              pageLength = 100))
+```
+</div>
+
+
+```{r echo=TRUE}
+# Process NPOC data
+
+npoc_df <- raw_df %>% filter(!is.na(Result.NPOC.)) %>% 
+            filter(Type != "Standard") %>% 
+            select(Sample.Name, Sample.ID, Result.NPOC., Vial, DateTime)
+
+npoc_blanks <- npoc_df %>% filter(grepl("BLANK", toupper(Sample.Name)))
+### Blank correction???
+
+
+npoc_checks <- suppressWarnings(npoc_df %>% filter(grepl("CCV", Sample.Name)) %>% 
+                mutate(Sample.ID = as.numeric(Sample.ID)) %>%
+                filter(!is.na(Sample.ID)) %>%
+                mutate(Accuracy = round(Result.NPOC.*100/Sample.ID, 2))) %>%
+                mutate(Note = ifelse(Accuracy < 95 | Accuracy > 105, 
+                                     "***WARNING***", "GOOD"))
+
+npoc_final <- npoc_df %>% filter(!grepl("BLANK", toupper(Sample.Name))) %>%
+                filter(!grepl("CCV", Sample.Name)) %>%
+                select(Sample.Name, Result.NPOC.)
+### Blank correction???
+
+
+```
+
+<button class="btn btn-primary" data-toggle="collapse" data-target="#NPOCData"> Show/Hide NPOC Data Table</button>  
+<div id="NPOCData" class="collapse">  
+```{r echo=TRUE}
+datatable(npoc_df, rownames = F,
+            options = list(
+              pageLength = 100))
+```
+</div>
+
+<button class="btn btn-primary" data-toggle="collapse" data-target="#NPOCBlanks"> Show/Hide NPOC Blanks</button>  
+<div id="NPOCBlanks" class="collapse">  
+```{r echo=TRUE}
+datatable(npoc_blanks, rownames = F,
+            options = list(
+              pageLength = 100))
+```
+</div>
+
+## NPOC Check Standards
+```{r echo=TRUE}
+datatable(npoc_checks, rownames = F,
+            options = list(
+              pageLength = 100))
+```
+
+## Final NPOC Data
+```{r echo=TRUE}
+datatable(npoc_final, rownames = F,
+          extensions = 'Buttons', options = list(
+            pageLength = 100,
+            dom = 'Bfrtip',
+            buttons = 
+              list('copy', 'print', list(
+                extend = 'collection',
+                buttons = c('csv', 'excel', 'pdf'),
+                text = 'Download'
+            ))))
+```
