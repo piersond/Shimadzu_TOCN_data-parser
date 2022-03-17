@@ -1,0 +1,59 @@
+﻿[Header],,,,,,,,,,,,
+System,TOC-L,,,,,,,,,,,
+S/W Version,1,,,,,,,,,,,
+User,nitrogen14,,,,,,,,,,,
+Date/Time,3/16/22 11:49,,,,,,,,,,,
+,,,,,,,,,,,,
+[System],,,,,,,,,,,,
+Instrument Options,TOC/ASI/IC Unit/TN/Sparge Kit/,,,,,,,,,,,
+,,,,,,,,,,,,
+[Data],,,,,,,,,,,,
+Type,Anal.,Sample Name,Sample ID,Result(TOC),Result(TC),Result(IC),Result(POC),Result(NPOC),Result(TN),Unit,Vial,Date / Time
+Unknown,NPOC,blank,Untitled,,,,,0,,mg/L,1,3/15/22 16:09
+Unknown,NPOC,blank,Untitled,,,,,0,,mg/L,2,3/15/22 16:19
+Standard,NPOC,NPOC_Cal,Untitled,,,,,12.12,,mg/L,"3, 20, 21, 22, 23, 24, 25",3/15/22 17:52
+Unknown,NPOC,blank,Untitled,,,,,0.3041,,mg/L,4,3/15/22 18:09
+Unknown,NPOC,CCV_5.927,5.927,,,,,5.983,,mg/L,31,3/15/22 18:24
+Unknown,NPOC,CCV_5.927,5.927,,,,,6.036,,mg/L,32,3/15/22 18:32
+Unknown,NPOC,CCV_TIC,Untitled,,,,,0.3203,,mg/L,33,3/15/22 18:42
+Unknown,NPOC,blank,Untitled,,,,,0.1029,,mg/L,5,3/15/22 18:57
+Unknown,NPOC,d20220306h,Untitled,,,,,3.712,,mg/L,50,3/15/22 19:15
+Unknown,NPOC,J20220306h,Untitled,,,,,8.044,,mg/L,51,3/15/22 19:24
+Unknown,NPOC,T20220306h,Untitled,,,,,3.42,,mg/L,52,3/15/22 19:34
+Unknown,NPOC,S20220306h,Untitled,,,,,2.41,,mg/L,53,3/15/22 19:45
+Unknown,NPOC,O20220306h,Untitled,,,,,3.098,,mg/L,54,3/15/22 19:52
+Unknown,NPOC,blank,Untitled,,,,,0.1222,,mg/L,6,3/15/22 20:08
+Unknown,NPOC,J20220306b7,field blank,,,,,1.022,,mg/L,55,3/15/22 20:23
+Unknown,NPOC,J20220306P1,Untitled,,,,,7.511,,mg/L,56,3/15/22 20:31
+Unknown,NPOC,J20220306P2,Untitled,,,,,8.157,,mg/L,57,3/15/22 20:39
+Unknown,NPOC,J20220306P3,Untitled,,,,,8.758,,mg/L,58,3/15/22 20:47
+Unknown,NPOC,J20220306MS6,Untitled,,,,,9.062,,mg/L,59,3/15/22 20:56
+Unknown,NPOC,T20220306P3,Untitled,,,,,10.66,,mg/L,60,3/15/22 21:04
+Unknown,NPOC,blank,Untitled,,,,,0.08434,,mg/L,7,3/15/22 21:20
+Unknown,NPOC,CCV_5.927,5.927,,,,,5.886,,mg/L,34,3/15/22 21:36
+Unknown,NPOC,CCV_5.927,5.927,,,,,5.98,,mg/L,35,3/15/22 21:44
+Unknown,NPOC,CCV_TIC,Untitled,,,,,0.2353,,mg/L,36,3/15/22 21:53
+Unknown,NPOC,blank,Untitled,,,,,0.04222,,mg/L,8,3/15/22 22:09
+Unknown,TN,blank,Untitled,,,,,,0,mg/L,9,3/15/22 22:24
+Unknown,TN,blank,Untitled,,,,,,0,mg/L,10,3/15/22 22:38
+Standard,TN,TN_Cal,Untitled,,,,,,1.003,mg/L,"11, 26, 27, 28, 29, 30",3/15/22 23:53
+Unknown,TN,blank,Untitled,,,,,,0.02027,mg/L,12,3/16/22 0:08
+Unknown,TN,CCV_0.512,0.512,,,,,,0.497,mg/L,40,3/16/22 0:26
+Unknown,TN,CCV_0.512,0.512,,,,,,0.5056,mg/L,41,3/16/22 0:45
+Unknown,TN,blank,Untitled,,,,,,0.03244,mg/L,13,3/16/22 1:02
+Unknown,TN,d20220306h,Untitled,,,,,,0.5071,mg/L,61,3/16/22 1:23
+Unknown,TN,J20220306h,Untitled,,,,,,0.3803,mg/L,62,3/16/22 1:44
+Unknown,TN,T20220306h,Untitled,,,,,,0.2472,mg/L,63,3/16/22 2:05
+Unknown,TN,S20220306h,Untitled,,,,,,0.2332,mg/L,64,3/16/22 2:25
+Unknown,TN,O20220306h,Untitled,,,,,,0.2931,mg/L,65,3/16/22 2:45
+Unknown,TN,blank,Untitled,,,,,,0.00913,mg/L,14,3/16/22 3:00
+Unknown,TN,J20220306b7,field blank,,,,,,0.03549,mg/L,66,3/16/22 3:17
+Unknown,TN,J20220306P1,Untitled,,,,,,0.3142,mg/L,67,3/16/22 3:38
+Unknown,TN,J20220306P2,Untitled,,,,,,0.3253,mg/L,68,3/16/22 3:58
+Unknown,TN,J20220306P3,Untitled,,,,,,0.3388,mg/L,69,3/16/22 4:18
+Unknown,TN,J20220306MS6,Untitled,,,,,,0.4058,mg/L,70,3/16/22 4:39
+Unknown,TN,T20220306P3,Untitled,,,,,,0.4886,mg/L,71,3/16/22 5:01
+Unknown,TN,blank,Untitled,,,,,,0.01786,mg/L,15,3/16/22 5:17
+Unknown,TN,CCV_0.512,0.512,,,,,,0.4898,mg/L,42,3/16/22 5:37
+Unknown,TN,CCV_0.512,0.512,,,,,,0.4988,mg/L,43,3/16/22 5:57
+Unknown,TN,blank,Untitled,,,,,,0.02647,mg/L,16,3/16/22 6:16
